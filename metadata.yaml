@@ -1,0 +1,44 @@
+documentclass: book
+
+classoption:
+  - 10pt
+  - a4paper
+  - oneside
+  - openany
+  - english
+  - italian
+
+author: nomeLaureando
+
+relatore: nomeRelatore
+
+title: titoloTesi
+
+istituto: Università degli studi di Padova
+
+dipartimento: Dipartimento di Matematica "Tullio Levi-Civita"
+
+corso: Corso di Laurea Triennale in Informatica
+
+annoAccademico: 2020/2021
+
+lang: it
+
+logo: img/unipd-logo.png
+
+link-citations: true
+
+lof: yes
+
+lot: yes
+
+toc: yes
+
+hyperrefoptions:
+ - pdfa
+
+colorlinks: true
+
+glossary: yes
+
+acronyms: yes

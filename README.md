@@ -3,7 +3,7 @@
 Questa repository contiene un template utilizzato per la laurea triennale 
 in Informatica nell'anno accademico 20/21. IL template e stato realizzato 
 con [Pandoc](https://pandoc.org/) e ispirandosi al seguente template già
-esistente: [](https://github.com/FIUP/Thesis-template.git).
+esistente: [https://github.com/FIUP/Thesis-template.git](https://github.com/FIUP/Thesis-template.git).
 
 # Motivazioni
 

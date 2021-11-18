@@ -3,10 +3,17 @@ name: Build artifact
 on: push
 
 jobs:
-  build:
+  Build_artifact:
     runs-on: ubuntu-latest
+    container:
+      image: pandoc/latex:2.14
+      options: --entrypoint=sh
     steps:
-      - uses: $GITHUB_REPOSITORY/.github/workflows/setup_environment.yml
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Install make
+        run: apk add make
 
       - name: Compile with makefile
         run: make

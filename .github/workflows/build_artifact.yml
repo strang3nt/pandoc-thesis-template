@@ -12,9 +12,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Install make
+      - name: Install dependencies
         run: |
-          apk add texmf-dist-latexextra
+          apk add texmf-dist
           apk add make
 
       - name: Compile with makefile

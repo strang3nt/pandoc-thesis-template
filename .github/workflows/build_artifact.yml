@@ -6,15 +6,15 @@ jobs:
   Build_artifact:
     runs-on: ubuntu-latest
     container:
-      image: pandoc/latex:2.14
-      options: --entrypoint=sh
+      image: ghcr.io/xu-cheng/texlive-full:latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
 
       - name: Install dependencies
         run: |
-          apk add texmf-dist-latexextra
+          apk update
+          apk add pandoc
           apk add make
 
       - name: Compile with makefile

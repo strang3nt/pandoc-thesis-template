@@ -1,0 +1,18 @@
+name: Build artifact
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: $GITHUB_REPOSITORY/.github/workflows/setup_environment.yml
+
+      - name: Compile with makefile
+        run: make
+
+      - name: Publish artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: thesis
+          path: output/tesi.pdf

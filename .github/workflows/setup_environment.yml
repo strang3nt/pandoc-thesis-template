@@ -1,0 +1,19 @@
+name: Setup environment
+
+on: workflow_call
+
+jobs:
+  Setup_environment:
+    runs-on: ubuntu-latest
+    container:
+      image: pandoc/latex:2.14
+      options: --entrypoint=sh
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Install make
+        run: apk add make
+
+      - name: Test make
+        run: make -v

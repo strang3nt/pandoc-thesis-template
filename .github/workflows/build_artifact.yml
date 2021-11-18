@@ -13,7 +13,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install make
-        run: apk add make
+        run: |
+          apk add texmf-dist-latexextra
+          apk add make
 
       - name: Compile with makefile
         run: make

@@ -1,6 +1,8 @@
-name: Compile and publish thesis
+name: Build and release artifact
 
-on: [push]
+on:
+  push:
+    - main
 
 jobs:
   build:
@@ -24,3 +26,10 @@ jobs:
         with:
           name: thesis
           path: output/tesi.pdf
+      
+      - name: Release artifact
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          generate_release_notes: true
+          files: output/tesi.pdf
